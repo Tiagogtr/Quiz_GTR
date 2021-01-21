@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Musica</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./imagens/">
+</head>
+<body>
+    <section class="sla">
+       
+        <h1>Quiz Musical</h1>
+
+    <main>  
+        <section id="tabuleiro">
+            <div id="card1" class="card">
+                <img class="img" src="./imagens/card1.jpg" alt="dó, ré, mí"><br>
+                <h2 class="texto-card">"Dó, Ré, Mi..." Qual é a sequência da escala?</h2><br>
+                <img id="img-1"src="" alt="">
+                <input type="radio" name="resp-1" id="alt11"><label><strong> Sol, Fá, Sí, Lá</strong></label><br>
+                <input type="radio" name="resp-1" id="alt12"><label><strong> Fá, Sol, Lá, Sí</strong></label><br>
+                <input type="radio" name="resp-1" id="alt13"><label><strong> Sí, Lá, sol, Fá</strong></label><br>
+                <button class="btn" onclick="pergunta1()">Responder</button><br>
+                <strong><span id="resultado1"></span></strong><br>
+                <span class="atualPontuacao"><strong>Pontuação Atual:</strong></span><br>
+                <strong><span id="situacao_atual">0/12</span></strong><br>
+            </div>
+            <div id="card2" class="card">
+                <img class="img" src="./imagens/card2.jpg" alt="partitura" sizes="10px" srcset=""><br>
+                <h2 class="texto-card">A imagem acima é de uma?</h2><br>
+                <img id="img-2"src="" alt="">
+                <input type="radio" name="resp-2" id="alt21"><label><strong> Partitura</strong></label><br>
+                <input type="radio" name="resp-2" id="alt22"><label><strong> Tablatura</strong></label><br>
+                <input type="radio" name="resp-2" id="alt23"><label><strong> Cifra</strong></label><br>
+                <button class="btn" onclick="pergunta2()">Responder</button><br>
+                <strong><span id="resultado2"></span></strong><br>
+                <span class="atualPontuacao"><strong>Pontuação Atual:</strong></span><br>
+                <strong><span id="situacao_atual2">0/12</span></strong><br>
+            </div>
+            <div id="card3" class="card">
+                <img class="img" src="./imagens/card3.jpg" alt=""><br>
+                <h2 class="texto-card">Que nome é dado a pequena vareta usada por maestros?</h2><br>
+                <img id="img-3"src="" alt="">
+                <input type="radio" name="resp-3" id="alt31"><label><strong> Varinha das Varinhas</strong></label><br>
+                <input type="radio" name="resp-3" id="alt32"><label><strong> Pedaço de Pau</strong></label><br>
+                <input type="radio" name="resp-3" id="alt33"><label><strong> Batuta</strong></label><br>
+                <button class="btn" onclick="pergunta3()">Responder</button><br>
+                <strong><span id="resultado3"></span></strong><br>
+                <span class="atualPontuacao"><strong>Pontuação Atual:</strong></span><br>
+                <strong><span id="situacao_atual3">0/12</span></strong><br>
+            </div>
+            <div width="" id="card4" class="card">
+                <img class="img" src="./imagens/card4.jpg" alt=""><br>
+                <h2 class="texto-card">Na música "Não Quero Dinheiro" de Tim Maia, o eu lírico diz que fica a semana inteira esperando para ver sua amada...</h2><br>
+                <img id="img-4"src="" alt="">
+                <input type="radio" name="resp-4" id="alt41"><label><strong> Feliz e cantando</strong></label><br>
+                <input type="radio" name="resp-4" id="alt42"><label><strong> Sorrindo e pulando</strong></label><br>
+                <input type="radio" name="resp-4" id="alt43"><label><strong> Sorrindo e cantando</strong></label><br>
+            </div>
+            <div id="card5" class="card">
+                <img class="img" src="./imagens/card5.png" alt=""><br>
+                <h2 class="texto-card">Latino, Belo e Roberto Carlos são cantores:</h2><br>
+                <img id="img-5"src="" alt="">
+                <input type="radio" name="resp-5" id="alt51"><label><strong> Ruíns</strong></label><br>
+                <input type="radio" name="resp-5" id="alt52"><label><strong> Péssimos</strong></label><br>
+                <input type="radio" name="resp-5" id="alt53"><label><strong> Que não deviam ter iniciado a carreira</strong></label><br>
+            </div>
+            <div id="card6" class="card">
+                <img class="img" src="./imagens/card6.jpg" alt=""><br>
+                <h2 class="texto-card">Na clássica música do grupo Rouge, quem está possuído pelo ritmo Ragatanga?</h2><br>
+                <img id="img-6"src="" alt="">
+                <input type="radio" name="resp-6" id="alt61"><label><strong> Luíz</strong></label><br>
+                <input type="radio" name="resp-6" id="alt62"><label><strong> Roberto</strong></label><br>
+                <input type="radio" name="resp-6" id="alt63"><label><strong> Diego</strong></label><br>
+            </div>
+            <div id="card7" class="card">
+                <img class="img" src="./imagens/card7.jpg" alt=""><br>
+                <h2 class="texto-card">Qual a nacionalidade do compositor Ludwig van Beethoven?</h2><br>
+                <img id="img-7"src="" alt="">
+                <input type="radio" name="resp-7" id="alt71"><label><strong> Alemão</strong></label><br>
+                <input type="radio" name="resp-7" id="alt72"><label><strong> Austríaco</strong></label><br>
+                <input type="radio" name="resp-7" id="alt73"><label><strong> Francês</strong></label><br>
+            </div>
+            <div id="card8" class="card">
+                <img class="img" src="./imagens/card8.jpg" alt=""><br>
+                <h2 class="texto-card">O trompete é um instrumento de...</h2><br>
+                <img id="img-8"src="" alt="">
+                <input type="radio" name="resp-8" id="alt81"><label><strong> Corda</strong></label><br>
+                <input type="radio" name="resp-8" id="alt82"><label><strong> Sopro</strong></label><br>
+                <input type="radio" name="resp-8" id="alt83"><label><strong> Percussão</strong></label><br>
+            </div>
+            <div id="card9" class="card">
+                <img class="img" src="./imagens/card9.JPG" alt=""><br>
+                <h2 class="texto-card">Qual a maior cantora de todos os tempos?</h2><br>
+                <img id="img-9"src="" alt="">
+                <input class="botao" type="radio" name="resp-9" id="alt91"><label><strong> Aretha Franklin</strong></label><br>
+                <input type="radio" name="resp-9" id="alt92"><label><strong> Whitney Houston</strong></label><br>
+                <input type="radio" name="resp-9" id="alt93"><label><strong> Beyoncé</strong></label><br>
+            </div>
+            <div id="card10" class="card">
+                <img class="img" src="./imagens/card10.jpg" alt=""><br>
+                <h2 class="texto-card">Qual o primeiro verso da música "Diário de um detento" do grupo Racionais Mc's?</h2><br>
+                <img id="img-10"src="" alt="">
+                <input type="radio" name="resp-10" id="alt101"><label><strong> "Aqui estou mais um dia, sob o olhar sanguinário do vigia"</strong></label><br>
+                <input type="radio" name="resp-10" id="alt102"><label><strong> "Aqui estou mais um dia, sob o olhar sanguinário dos cria"</strong></label><br>
+                <input type="radio" name="resp-10" id="alt103"><label><strong> "Aqui estou mais um dia, sob o olhar sanguinário da dona Maria"</strong></label><br>
+            </div>
+            <div id="card11" class="card">
+                <img class="img" src="./imagens/card11.jpg" alt=""><br>
+                <h2 class="texto-card">Em um dos Clássicos da MPB brasileira, a banda mundialmente famosa Raça Negra pede ajuda para segurar algo, o que é?</h2><br>
+                <img id="img-11"src="" alt="">
+                <input type="radio" name="resp-11" id="alt111"><label><strong> Madeira</strong></label><br>
+                <input type="radio" name="resp-11" id="alt112"><label><strong> Barra</strong></label><br>
+                <input type="radio" name="resp-11" id="alt113"><label><strong> Colher</strong></label><br>
+            </div>
+            <div id="card12" class="card">
+                <img class="img" src="./imagens/card12.JPG" alt=""><br>
+                <h2 class="texto-card">Qual o MAIOR cantor de todos os TEMPOS!?</h2><br>
+                <img id="img-12"src="" alt="">
+                <input type="radio" name="resp-12" id="alt111"><label><strong> Fred Mercury</strong></label><br>
+                <input type="radio" name="resp-12" id="alt112"><label><strong> Frank Sinatra</strong></label><br>
+                <input type="radio" name="resp-12" id="alt113"><label><strong> Michael Jackson</strong></label><br>
+            </div>
+        </section>
+        <button onclick="iniciaJogo()">Confirmar Respostas</button>
+        <button onclick="ReiniciaJogo()">Reiniciar</button>
+    </main>
+
+    <script src="./js/Pontuação.js"></script>
+    <script src="./js/jogo.js"></script>
+</body>
+</html>
